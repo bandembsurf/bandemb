@@ -169,3 +169,27 @@ body{
     animation-delay: 0s;
     
 }
+
+a {
+    position: absolute;
+    background-color: var(--blue);
+    font-family: var(--font);
+    color: white;
+    border-radius: 18px;
+    border: none;
+    text-decoration: none;
+    padding: 10px 20px;
+    transition: all 0.5s;
+    right: 20px;
+    top: 10px;
+}
+
+a:hover {
+    background-color: white;
+    color: var(--blue);
+}
+
+a:focus {
+    background-color: white;
+    color: #2ecc71;
+}
