@@ -19,7 +19,23 @@ body {
     align-items: center;
     justify-content: center;
     background: var(--skin);
-    min-height: 100vh;
+    overflow: hidden;
+}
+
+.div {
+    position: absolute;
+    top: 50%;
+    transform: translatey(-50%);
+}
+
+@media only screen and (max-width:768px) {
+    .div {
+        position: absolute;
+        top: 50%;
+        transform: translatey(-50%);
+        max-width: 50%;
+        max-height: 50%;
+    }
 }
 
 .container {
@@ -38,6 +54,14 @@ body {
     animation: name 2.4s linear infinite;
 }
 
+@media only screen and (max-width:768px) {
+    .container span {
+        font-size: 2em;
+        font-weight: 400;
+        margin: 0 2px;
+    }
+}
+
 @keyframes name {
     0% {
         text-shadow: 0 0 10px rgba(0, 0, 0, 0.35);
@@ -53,6 +77,26 @@ body {
         text-shadow: 0 0 10px rgba(0, 0, 0, 0.35);
         transform: scale(1);
         opacity: 0;
+    }
+}
+
+@media only screen and (max-width:768px) {
+    @keyframes name {
+        0% {
+            text-shadow: 0 0 5px rgba(0, 0, 0, 0.35);
+            transform: scale(1);
+            opacity: 0;
+        }
+        50% {
+            text-shadow: 0 5px 10px rgba(0, 0, 0, 0.35);
+            transform: scale(1.2);
+            opacity: 1;
+        }
+        100% {
+            text-shadow: 0 0 5px rgba(0, 0, 0, 0.35);
+            transform: scale(1);
+            opacity: 0;
+        }
     }
 }
 
@@ -84,51 +128,78 @@ body {
     animation-delay: 1.2s;
 }
 
-a {
+nav {
+    top: 0%;
     position: absolute;
-    background-color: var(--white);
+    width: 100%;
+    height: 75px;
+    z-index: 100;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media only screen and (max-width:768px) {
+    nav {
+        height: 45px;
+    }
+}
+
+.main-3 {
+    width: 100%;
+    height: 100%;
+    margin: 0px 2em;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+@media only screen and (max-width:768px) {
+    .main-3 {
+        margin: 0px 1.2em;
+    }
+}
+
+a {
+    position: relative;
     font-family: var(--font);
-    color: var(--black);
     border-radius: 18px;
     border: none;
     text-decoration: none;
     padding: 10px 20px;
     transition: all 0.5s;
-    ;
-    top: 10px;
 }
 
-#btn-1 {
-    right: 20px;
+@media only screen and (max-width:768px) {
+    a {
+        padding: 4px 14px;
+        border-radius: 14px;
+    }
 }
 
-#btn-2 {
-    left: 20px;
+a#btn-2,
+a#btn-1 {
+    color: var(--black);
+    background-color: white;
 }
 
-a:hover {
+a:hover#btn-1,
+a:hover#btn-2 {
     background-color: var(--black);
-    color: var(--white);
+    color: white;
 }
 
-a:focus {
+a:focus#btn-1,
+a:focus#btn-2 {
     background-color: var(--black);
-    color: var(--white);
+    color: white;
 }
 
 a#btn-3 {
-    position: absolute;
     background-color: white;
-    font-family: var(--font);
     color: var(--lred);
-    border-radius: 18px;
-    border: none;
-    text-decoration: none;
-    padding: 10px 20px;
-    transition: all 0.5s;
-    top: 10px;
-    left: 50%;
-    transform: translateX(-50%);
 }
 
 a:hover#btn-3 {
