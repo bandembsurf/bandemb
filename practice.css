@@ -1,10 +1,24 @@
+:root {
+    --white: #fff;
+    --black: #141414;
+    --orange: #FF9700;
+    --red: #E50914;
+    --lred: #f7797d;
+    --green: #2ecc71;
+    --blue: #3498db;
+    --purple: #9c27b0;
+    --skin: #fdb35d;
+    --lgreen: #A5FECB;
+    --font: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
 body {
     margin: 0;
     padding: 0;
     display: flex;
     align-items: center;
     justify-content: center;
-    background: #fff;
+    background: var(--skin);
     min-height: 100vh;
 }
 
@@ -19,7 +33,7 @@ body {
     margin: 0 15px;
     text-align: center;
     font-weight: 700;
-    color: #fff;
+    color: var(--skin);
     font-family: sans-serif;
     animation: name 2.4s linear infinite;
 }
@@ -72,9 +86,9 @@ body {
 
 a {
     position: absolute;
-    background-color: var(--blue);
+    background-color: var(--white);
     font-family: var(--font);
-    color: white;
+    color: var(--black);
     border-radius: 18px;
     border: none;
     text-decoration: none;
@@ -93,11 +107,36 @@ a {
 }
 
 a:hover {
-    background-color: white;
-    color: var(--blue);
+    background-color: var(--black);
+    color: var(--white);
 }
 
 a:focus {
+    background-color: var(--black);
+    color: var(--white);
+}
+
+a#btn-3 {
+    position: absolute;
     background-color: white;
-    color: #2ecc71;
+    font-family: var(--font);
+    color: var(--lred);
+    border-radius: 18px;
+    border: none;
+    text-decoration: none;
+    padding: 10px 20px;
+    transition: all 0.5s;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+a:hover#btn-3 {
+    background-color: var(--lred);
+    color: white;
+}
+
+a:focus#btn-3 {
+    background-color: var(--lred);
+    color: white;
 }
