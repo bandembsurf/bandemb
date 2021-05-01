@@ -54,6 +54,22 @@ body {
     }
 }
 
+@media only screen and (max-width:768px) {
+    .loader {
+        width: 200px;
+        height: 200px;
+    }
+    @keyframes animate {
+        0%,
+        100% {
+            transform: translatez(-80px);
+        }
+        50% {
+            transform: translatez(80px);
+        }
+    }
+}
+
 .loader span:nth-child(1) {
     top: 0px;
     left: 0px;
@@ -166,50 +182,179 @@ body {
     animation-delay: 0s;
 }
 
-a {
+@media only screen and (max-width:768px) {
+    .loader span:nth-child(1) {
+        top: 95px;
+        left: 95px;
+        bottom: 95px;
+        right: 95px;
+        animation-delay: 1.3s;
+    }
+    .loader span:nth-child(2) {
+        top: 85px;
+        left: 85px;
+        bottom: 85px;
+        right: 85px;
+        animation-delay: 1.2s;
+    }
+    .loader span:nth-child(3) {
+        top: 75px;
+        left: 75px;
+        bottom: 75px;
+        right: 75px;
+        animation-delay: 1.1s;
+    }
+    .loader span:nth-child(4) {
+        top: 65px;
+        left: 65px;
+        bottom: 65px;
+        right: 65px;
+        animation-delay: 1s;
+    }
+    .loader span:nth-child(5) {
+        top: 55px;
+        left: 55px;
+        bottom: 55px;
+        right: 55px;
+        animation-delay: 0.9s;
+    }
+    .loader span:nth-child(6) {
+        top: 45px;
+        left: 45px;
+        bottom: 45px;
+        right: 45px;
+        animation-delay: 0.8s;
+    }
+    .loader span:nth-child(7) {
+        top: 35px;
+        left: 35px;
+        bottom: 35px;
+        right: 35px;
+        animation-delay: 0.7s;
+    }
+    .loader span:nth-child(8) {
+        top: 35px;
+        left: 35px;
+        bottom: 35px;
+        right: 35px;
+        animation-delay: 0.6s;
+    }
+    .loader span:nth-child(9) {
+        top: 45px;
+        left: 45px;
+        bottom: 45px;
+        right: 45px;
+        animation-delay: 0.5s;
+    }
+    .loader span:nth-child(10) {
+        top: 55px;
+        left: 55px;
+        bottom: 55px;
+        right: 55px;
+        animation-delay: 0.4s;
+    }
+    .loader span:nth-child(11) {
+        top: 65px;
+        left: 65px;
+        bottom: 65px;
+        right: 65px;
+        animation-delay: 0.3s;
+    }
+    .loader span:nth-child(12) {
+        top: 75px;
+        left: 75px;
+        bottom: 75px;
+        right: 75px;
+        animation-delay: 0.2s;
+    }
+    .loader span:nth-child(13) {
+        top: 85px;
+        left: 85px;
+        bottom: 85px;
+        right: 85px;
+        animation-delay: 0.1s;
+    }
+    .loader span:nth-child(14) {
+        top: 95px;
+        left: 95px;
+        bottom: 95px;
+        right: 95px;
+        animation-delay: 0s;
+    }
+}
+
+nav {
+    top: 0%;
     position: absolute;
-    background-color: white;
+    width: 100%;
+    height: 75px;
+    z-index: 100;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media only screen and (max-width:768px) {
+    nav {
+        height: 45px;
+    }
+}
+
+.main-3 {
+    width: 100%;
+    height: 100%;
+    margin: 0px 2em;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+@media only screen and (max-width:768px) {
+    .main-3 {
+        margin: 0px 1.2em;
+    }
+}
+
+a {
+    position: relative;
     font-family: var(--font);
-    color: var(--orange);
     border-radius: 18px;
     border: none;
     text-decoration: none;
     padding: 10px 20px;
     transition: all 0.5s;
-    top: 10px;
 }
 
-#btn-1 {
-    right: 20px;
+@media only screen and (max-width:768px) {
+    a {
+        padding: 4px 14px;
+        border-radius: 14px;
+    }
 }
 
-#btn-2 {
-    left: 20px;
+a#btn-2,
+a#btn-1 {
+    color: var(--orange);
+    background-color: white;
 }
 
-a:hover {
+a:hover#btn-1,
+a:hover#btn-2 {
     background-color: var(--orange);
     color: white;
 }
 
-a:focus {
+a:focus#btn-1,
+a:focus#btn-2 {
     background-color: var(--orange);
     color: white;
 }
 
 a#btn-3 {
-    position: absolute;
     background-color: white;
-    font-family: var(--font);
     color: var(--lred);
-    border-radius: 18px;
-    border: none;
-    text-decoration: none;
-    padding: 10px 20px;
-    transition: all 0.5s;
-    top: 10px;
-    left: 50%;
-    transform: translateX(-50%);
 }
 
 a:hover#btn-3 {
