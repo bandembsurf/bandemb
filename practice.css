@@ -55,7 +55,7 @@ body {
 
 @media only screen and (max-width:768px) {
     .container span {
-        font-size: 4em;
+        font-size: 2rem;
         font-weight: 400;
         margin: 0 2px;
     }
