@@ -6,7 +6,7 @@
     --lred: #f7797d;
     --green: #2ecc71;
     --blue: #3498db;
-    --purple: #c471ed;
+    --purple: #9c27b0;
     --skin: #fdb35d;
     --lgreen: #A5FECB;
     --font: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -168,15 +168,14 @@ body {
 
 a {
     position: absolute;
-    background-color: var(--blue);
+    background-color: white;
     font-family: var(--font);
-    color: white;
+    color: var(--orange);
     border-radius: 18px;
     border: none;
     text-decoration: none;
     padding: 10px 20px;
     transition: all 0.5s;
-    ;
     top: 10px;
 }
 
@@ -189,11 +188,36 @@ a {
 }
 
 a:hover {
-    background-color: white;
-    color: var(--blue);
+    background-color: var(--orange);
+    color: white;
 }
 
 a:focus {
+    background-color: var(--orange);
+    color: white;
+}
+
+a#btn-3 {
+    position: absolute;
     background-color: white;
-    color: #2ecc71;
+    font-family: var(--font);
+    color: var(--lred);
+    border-radius: 18px;
+    border: none;
+    text-decoration: none;
+    padding: 10px 20px;
+    transition: all 0.5s;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+a:hover#btn-3 {
+    background-color: var(--lred);
+    color: white;
+}
+
+a:focus#btn-3 {
+    background-color: var(--lred);
+    color: white;
 }
