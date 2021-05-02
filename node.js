@@ -26,3 +26,7 @@ function dome6() {
     document.getElementById('selection').style.display = 'none';
 
 }
+
+setTimeout(() => {
+    document.getElementById('anme').style.display = 'none';
+}, 3000);
